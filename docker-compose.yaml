@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  observium:
+    image: henningkessler/observium
+    restart: always
+
+  nagios:
+    image: jasonrivers/nagios
+    restart: always
