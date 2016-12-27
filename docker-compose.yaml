@@ -8,10 +8,12 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
     environment:
-      - "MYSQL_ROOT_PASSWORD=mypass"
+      - "MYSQL_ROOT_PASSWORD=mypass,MYSQL_USER=admin,MYSQL_PASSWORD=mypass,MYSQL_DATABASE=OBDB"
 
   observium:
     image: henningkessler/observium
+    volumes:
+    - ./config.php:/opt/observium/config.php:ro
     restart: always
     ports:
       - "8000:80"
