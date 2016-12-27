@@ -9,3 +9,7 @@ Deploy using docker-compose
 git clone https://github.com/rachyandco/networklogserver.git
 cd networklogserver
 docker-compose up -d
+
+
+default Nagios user/passs
+nagiosadmin:nagios

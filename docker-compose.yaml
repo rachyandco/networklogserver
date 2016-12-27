@@ -2,14 +2,27 @@ version: '2'
 
 services:
 
+  mariadb:
+    image: mariadb
+    restart: always
+    volumes:
+      - mariadb:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=mypass"
+
   observium:
     image: henningkessler/observium
     restart: always
     ports:
       - "8000:80"
+    links:
+      - mariadb
 
   nagios:
     image: jasonrivers/nagios
     restart: always
     ports:
       - "8001:80"
+
+volumes:
+   mariadb:
