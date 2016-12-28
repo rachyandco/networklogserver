@@ -2,10 +2,10 @@
 
 Done with <3 by rachyandco at #33C3 with the help of Porcus (will@as2613.net).
 
-Quick install of observium and nagios instances on the same VM. Tested on https://exoscale.ch.
+Quick install of observium and nagios instances on the same VM. Tested on https://exoscale.ch on a Ubuntu 16.04.
 
 
-## Install using CloudStack
+## Prepare VM using CloudStack
 
 	copy cs-userdata file in the exoscale interface.
 
