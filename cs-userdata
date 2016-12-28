@@ -12,3 +12,7 @@ runcmd:
  - [ sh, -c, "sudo systemctl restart docker"]
  - [ sh, -c, "sudo curl -L https://github.com/docker/compose/releases/download/1.9.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"]
  - [ sh, -c, "sudo chmod +x /usr/local/bin/docker-compose"]
+ - [ sh, -c, "sudo git clone https://github.com/rachyandco/networklogserver.git"]
+ - [ sh, -c, "sudo cd networklogserver"]
+ - [ sh, -c, "sudo docker-compose up -d"]
+ - [ sh, -c, "sudo docker exec -it networklogserver_observium_1 bash -c '/opt/observium/discovery.php -u'"]
