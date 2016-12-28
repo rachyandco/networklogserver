@@ -8,7 +8,10 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
     environment:
-      - "MYSQL_ROOT_PASSWORD=mypass,MYSQL_USER=admin,MYSQL_PASSWORD=mypass,MYSQL_DATABASE=OBDB"
+      MYSQL_ROOT_PASSWORD: mypass
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: mypass
+      MYSQL_DATABASE: OBDB
 
   observium:
     image: henningkessler/observium
