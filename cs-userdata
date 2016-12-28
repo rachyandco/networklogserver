@@ -2,6 +2,7 @@
 manage_etc_hosts: true
 fqdn: networklogserver
 repo_update: true
+package_upgrade: true
 
 runcmd:
  - [ sh, -c, "sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D" ]
