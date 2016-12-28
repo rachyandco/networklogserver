@@ -16,7 +16,8 @@ services:
   observium:
     image: henningkessler/observium
     volumes:
-    - ./config.php:/opt/observium/config.php:ro
+      - observium:/opt/observium/rrd/
+      - ./config.php:/opt/observium/config.php:ro
     restart: always
     ports:
       - "8000:80"
@@ -30,4 +31,5 @@ services:
       - "8001:80"
 
 volumes:
-   mariadb:
+  mariadb:
+  observium:
