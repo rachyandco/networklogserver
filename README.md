@@ -19,6 +19,10 @@ Quick install of observium and nagios instances on the same VM. Tested on https:
 
 	docker exec -it networklogserver_observium_1 bash -c '/opt/observium/discovery.php -u'
 
+Add user to observium:
+
+	docker exec -it networklogserver_observium_1 bash -c '/opt/observium/adduser.php ob_admin ob_pass 10'
+
 ## Access to the web interfaces
 
 Nagios: 
