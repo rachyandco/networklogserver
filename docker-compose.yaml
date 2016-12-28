@@ -23,6 +23,9 @@ services:
       - "8000:80"
     links:
       - mariadb
+    #extra_hosts:
+    #  - "somehost:162.242.195.82"
+    #  - "otherhost:50.31.209.229"
 
   nagios:
     image: jasonrivers/nagios
